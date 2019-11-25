@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="draw()">
+	
+	<canvas id="sketch" width="300" height="300">
+	</canvas>	
+
+<script>	
+function draw() {
+		 	var sketch = document.getElementById('sketch');
+			var context = sketch.getContext("2d");
+		// DRAW STUFF HERE!		
+	context.fillStyle = "#F0C457";
+		
+		for (i = 0; i<=4; i++) {
+		// context.fillRect(x, y, width, height);
+		context.fillRect((i * 25), 20, 20, 20);
+		//(i * 25) this increments the X value at each iteration
+					// y = 20 a constant because horizontal position doesn't change
+					// width and height (20) are slightly less than increment (25)
+					// so that you can always see some space (5 px) between each square
+				}
+			}
+		</script>	
+			
+		</body>
+        </html>	
+			
+			

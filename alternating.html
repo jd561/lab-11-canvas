@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="draw()">
+	
+	<canvas id="sketch" width="300" height="300">
+	</canvas>	
+
+<script>	
+function draw() {
+		 	var sketch = document.getElementById('sketch');
+			var context = sketch.getContext("2d");
+			// DRAW STUFF HERE!
+			var userstring = prompt(" So , like , uh , how many pairs do you want?");
+			 var usernum = parseInt(userstring);
+			 var thismany = usernum * 2-1 
+
+
+
+			 for (i = 0; i <= thismany; i++) {
+			 	if (i % 2 == 0) {
+			 		// % 2 == 0 ensures that I have an EVEN number !
+			 		context.fillStyle = "#19C8FF"; // blue things 
+			 		context.fillRect((i * 25) , 20 , 20 ,20 );
+			 	} else {
+			 		// for all ODD number values of i 
+			 		context.fillStyle = "#5DFF7C"; // green things
+			 		context.beginPath();
+			 		context.arc((i * 25 + 10), 30, 10, 0, 2 * Math.PI, true);
+						// radius is 10 to match height of squares (20)
+						// i * 25 + 10 ensures an OFFSET of 10 px so that
+						// circles are constantly NEXT TO the squares
+					context.closePath();
+					context.fill();
+					}
+					}
+					}
+					</script> 
+
+				</body>
+				</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="draw()">
+	
+<canvas id="sketch" width="300" height="300">
+	</canvas>
+		
+<script>
+function draw() {
+		 	var sketch = document.getElementById('sketch');
+			var context = sketch.getContext("2d");	
+            //SQUARE:
+            context.fillStyle = "#FFF257";
+	// context.fillRect(x, y, width, height);
+        	context.fillRect(70, 70, 100, 100);
+
+		  // CIRCLE:
+             context.fillStyle = "#BBFF57";
+			 context.beginPath();
+			context.arc(50, 40, 40, 0, 2 * Math.PI, true);
+			context.closePath();
+			context.fill();
+		 // context,arc(x, y , radius , start angle , end angle , clockwise );
+	}		
+ </script>
+
+</body>
+</html>
+
+			
+
+
+			
+			
+			
+
+	
+
